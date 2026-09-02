@@ -1,32 +1,33 @@
 # Calculadora de gastos personasl
 
+class Gastos:
+    def gastos_personales(self):
+        print("\n===== CALCULADORA GASTOS PERSONALES =====\n")
 
-def gastos_personales():
-    print("\n===== GASTOS PERSONALES =====\n")
+        alquiler = float(input("Cuanto gastas en alquiler? "))
+        comida = float(input("Cuanto gastas en comida? "))
+        transporte = float(input("Cuanto gastas en transporte? "))
+        servicios = float(input("Cuanto gastas en servicios? "))
+        entretenimiento = float(input("Cuanto gastas en entretenimiento? "))
 
-    alquiler = float(input("Cuanto gastas en alquiler? "))
-    comida = float(input("Cuanto gastas en comida? "))
-    transporte = float(input("Cuanto gastas en transporte? "))
-    servicios = float(input("Cuanto gastas en servicios? "))
-    entretenimiento = float(input("Cuanto gastas en entretenimiento? "))
+        gastos = {
+            "Alquiler": alquiler,
+            "Comida": comida,
+            "Transporte": transporte,
+            "Servicios": servicios,
+            "Entretenimiento": entretenimiento
+        }
 
-    gastos = {
-        "Alquiler": alquiler,
-        "Comida": comida,
-        "Transporte": transporte,
-        "Servicios": servicios,
-        "Entretenimiento": entretenimiento
-    }
+        total_gastos = sum(gastos.values())
 
-    total_gastos = sum(gastos.values())
+        print("\n===== GASTOS PERSONALES =====\n")
 
-    print("\n===== GASTOS PERSONALES =====\n")
+        for categoria, gasto in gastos.items():
+            print(f"{categoria}: {gasto:.2f}")
 
-    for categoria, gasto in gastos.items():
-        print(f"{categoria}: {gasto}")
-
-    print("\n------------------------------------------")
-    print(f"Total de gastos: ${round(total_gastos, 2)}")
+        print("\n------------------------------------------")
+        print(f"Total de gastos: ${total_gastos:.2f}")
 
 
-gastos_personales()
+gastos_cesario = Gastos()
+gastos_cesario.gastos_personales()
