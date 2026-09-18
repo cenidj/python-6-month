@@ -113,11 +113,11 @@ print(encontrar_maximo(150, 20, 21, 12, 34, 46, -3))
 def mostrar_usuario(**kwargs):
     return kwargs
     # Other way to do it (I now the code below won't run)
-    usuario = {}
-    for key, value in kwargs.items():
-        usuario[key] = value
+    # usuario = {}
+    # for key, value in kwargs.items():
+    #     usuario[key] = value
 
-    return usuario
+    # return usuario
 
 
 user = mostrar_usuario(nombre="Cesario", edad=27, rol="developer")
@@ -135,3 +135,125 @@ def crear_configuracion(**kwargs):
 
 
 print(crear_configuracion(debug=True, port=8000, enviroment="development"))
+
+
+# 13. *args + ** kwargs
+def mostrar_datos(*args, **kwargs):
+    for el in args:
+        print(el)
+
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+
+mostrar_datos("Python", "FastAPI", "PostgreSQL", nivel="junior", remoto=True)
+
+
+# Level 5 - Lambda + map + filter
+# 14. Double numbers
+def doblar_numeros(numeros):
+    return list(map(lambda numero: numero * 2, numeros))
+
+
+print(doblar_numeros([1, 2, 3, 4]))
+
+
+# 15.  Filter adults
+def obtener_adultos(edades):
+    return list(filter(lambda edad: edad >= 18, edades))
+
+
+print(obtener_adultos([12, 18, 25, 16, 30, 14, 21]))
+
+
+# 16. Proccess names
+def procesar_nombres(nombres):
+    return list(map(lambda nombre: nombre.upper(), nombres))
+
+
+print(procesar_nombres(["ana", "carlos", "cesario"]))
+
+
+# Level 6 - sorted() + funciones
+# 17. order users
+usuarios = [
+    {"nombre": "Ana", "edad": 25},
+    {"nombre": "Carlos", "edad": 30},
+    {"nombre": "John", "edad": 17},
+    {"nombre": "Maria", "edad": 22},
+]
+
+
+def ordernar_usuarios(usuarios):
+    return sorted(usuarios, key=lambda x: x["edad"])
+
+
+print(ordernar_usuarios(usuarios))
+
+# 18 Order products
+productos = [
+    {"nombre": "Laptop", "precio": 1200},
+    {"nombre": "Mouse", "precio": 25},
+    {"nombre": "Keyboard", "precio": 80},
+    {"nombre": "M", "precio": 300},
+]
+
+
+def ordenar_productos(productos, descendente=False):
+    if descendente:
+        return sorted(productos, key=lambda producto: producto["precio"], reverse=True)
+    else:
+        return sorted(productos, key=lambda producto: producto["precio"])
+
+
+print(ordenar_productos(productos))
+print(ordenar_productos(productos, descendente=True))
+
+# Level 7 - Backend-style
+# 19. Procesar usuarios
+
+usuarios = [
+    {"nombre": "Ana", "edad": 25, "activo": True},
+    {"nombre": "Carlos", "edad": 30, "activo": False},
+    {"nombre": "John", "edad": 17, "activo": True},
+    {"nombre": "Maria", "edad": 22, "activo": True},
+]
+
+
+def obtener_usuarios_activos(usuarios):
+    usuarios_activos = list(filter(lambda usuario: usuario["activo"], usuarios))
+
+    return usuarios_activos
+
+
+print(obtener_usuarios_activos(usuarios))
+
+# 20. Last challenge - Employee manager
+empleados = [
+    {"nombre": "Ana", "salario": 50000, "departamento": "IT"},
+    {"nombre": "Carlos", "salario": 65000, "departamento": "HR"},
+    {"nombre": "John", "salario": 72000, "departamento": "IT"},
+    {"nombre": "Maria", "salario": 48000, "departamento": "Marketing"},
+    {"nombre": "Alex", "salario": 80000, "departamento": "IT"},
+]
+
+
+def gestionar_empleados(empleados, departamento=None, salario_minimo=0):
+    resultado = empleados
+    if departamento:
+        resultado = list(
+            filter(lambda empleado: empleado["departamento"] == departamento, resultado)
+        )
+
+    if salario_minimo > 0:
+        resultado = list(
+            filter(lambda empleado: empleado["salario"] >= salario_minimo, resultado)
+        )
+
+    resultado = sorted(resultado, key=lambda empleado: empleado["salario"])
+
+    return resultado
+
+
+print(gestionar_empleados(empleados, departamento="IT"))
+print(gestionar_empleados(empleados, salario_minimo=60000))
