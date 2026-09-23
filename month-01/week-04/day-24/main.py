@@ -285,7 +285,7 @@ with open("empleados.csv", "r") as archivo:
     )
     print(f"Empleado con salario mas alto: {empleado_salario_alto['nombre']}")
 
-
+# Ejercicio 15.
 # Sistema de empleados
 print("\n=== Sistema de empleados ===\n")
 menu = [
@@ -328,21 +328,27 @@ while True:
 
             edad = int(input("Edad: "))
 
+            if edad < 0:
+                raise ValueError("La edad no puede ser negativa.")
+
             with open("empleados.json", "r") as file:
                 empleados = json.load(file)
 
             with open("empleados.json", "w") as file:
                 empleados.append({"nombre": nombre, "edad": edad})
-                json.dump(empleados, file)
+                json.dump(empleados, file, indent=4)
 
         except ValueError as error:
             print(f"\nError: {error}\n")
 
         except FileNotFoundError:
-            with open("empleados.json", "w") as file:
-                json.dump([], file)
+            empleados = []
+            empleados.append({"nombre": nombre, "edad": edad})
 
-            print("El archivo no existia, creado recientemente. Intentalo de nuevo.")
+            with open("empleados.json", "w") as file:
+                json.dump(empleados, file, indent=4)
+
+            print("Empleado agregado satisfactoriamente!")
 
     if selection == "2":
         print("\nBuscar empleado:\n")
@@ -381,10 +387,10 @@ while True:
                         encontrado = index
                         break
 
-                if encontrado:
-                    empleados.pop(index)
+                if encontrado is not None:
+                    empleados.pop(encontrado)
                     with open("empleados.json", "w") as file:
-                        json.dump(empleados, file)
+                        json.dump(empleados, file, indent=4)
 
                     print("Empleado eliminado satisfactoriamente!")
                 else:
@@ -392,3 +398,6 @@ while True:
 
         except ValueError as error:
             print(f"Error: {error}")
+
+    if selection not in ["1", "2", "3", "4", "5"]:
+        print("\nOpcion invalida.\n")
