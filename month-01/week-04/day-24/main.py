@@ -238,7 +238,7 @@ with open("usuarios.json", "r") as archivo:
     usuarios = json.load(archivo)
 with open("usuarios.json", "w") as archivo:
     usuarios.append({"nombre": "Maria", "edad": 24})
-    json.dump(usuarios, archivo)
+    json.dump(usuarios, archivo, indent=4)
 
 # Ejercicio 11. CSV
 empleados = [
@@ -248,10 +248,10 @@ empleados = [
     ["Maria", 24, "Marketing", 48000],
 ]
 
-with open("empleados.csv", "w") as archivo:
+with open("empleados.csv", "w", newline="") as archivo:
     escritor = csv.writer(archivo)
 
-    escritor.writerow(["nombre", "ead", "departamento", "salario"])
+    escritor.writerow(["nombre", "edad", "departamento", "salario"])
     escritor.writerows(empleados)
 
 with open("empleados.csv", "r") as archivo:
