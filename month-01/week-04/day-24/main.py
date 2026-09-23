@@ -284,3 +284,111 @@ with open("empleados.csv", "r") as archivo:
         empleados, key=lambda empleado: int(empleado["salario"])
     )
     print(f"Empleado con salario mas alto: {empleado_salario_alto['nombre']}")
+
+
+# Sistema de empleados
+print("\n=== Sistema de empleados ===\n")
+menu = [
+    "1. Mostrar empleados",
+    "2. Buscar empleado",
+    "3. Agregar empleado",
+    "4. Eliminar empleado",
+    "5. Salir",
+]
+
+# empleados.json
+while True:
+    for option in menu:
+        print(option)
+
+    selection = input("\nSelect a menu option: ")
+
+    if selection == "5":
+        break
+
+    if selection == "1":
+        print("\nListado de empleados:\n")
+        try:
+            with open("empleados.json", "r") as file:
+                empleados = json.load(file)
+                for empleado in empleados:
+                    print(f"{empleado['nombre']}.")
+                print(" ")  # Salto de linea
+        except FileNotFoundError:
+            print("\nEl archivo no existe!\n")
+        except PermissionError:
+            print("\nNo tienes permisos para este archivo!\n")
+
+    if selection == "3":
+        try:
+            nombre = input("Nombre: ").strip()
+
+            if len(nombre) < 3:
+                raise ValueError("El nombre es muy corto!")
+
+            edad = int(input("Edad: "))
+
+            with open("empleados.json", "r") as file:
+                empleados = json.load(file)
+
+            with open("empleados.json", "w") as file:
+                empleados.append({"nombre": nombre, "edad": edad})
+                json.dump(empleados, file)
+
+        except ValueError as error:
+            print(f"\nError: {error}\n")
+
+        except FileNotFoundError:
+            with open("empleados.json", "w") as file:
+                json.dump([], file)
+
+            print("El archivo no existia, creado recientemente. Intentalo de nuevo.")
+
+    if selection == "2":
+        print("\nBuscar empleado:\n")
+
+        try:
+            nombre = input("Nombre: ").strip().lower()
+
+            with open("empleados.json", "r") as file:
+                empleados = json.load(file)
+                encontrado = False
+                for empleado in empleados:
+                    if empleado["nombre"].lower() == nombre:
+                        encontrado = True
+                        break
+
+                if encontrado:
+                    print(f"Empleado encontrado: {nombre}")
+                else:
+                    print("Empleado no encontrado.")
+
+        except ValueError as error:
+            print(f"Error: {error}")
+
+        except FileNotFoundError:
+            print("Crear archivo. El archivo no existe. ")
+
+    if selection == "4":
+        try:
+            nombre = input("Nombre: ").strip().lower()
+
+            with open("empleados.json", "r") as file:
+                empleados = json.load(file)
+                encontrado = None
+                for index, empleado in enumerate(empleados):
+                    if empleado["nombre"].lower() == nombre:
+                        encontrado = index
+                        break
+
+                if encontrado:
+                    empleados.pop(index)
+                    with open("empleados.json", "w") as file:
+                        json.dump(empleados, file)
+
+                    print("Empleado eliminado satisfactoriamente!")
+                else:
+                    print("Empleado no encontrado!")
+
+        except ValueError as error:
+            print(f"Error: {error}")
