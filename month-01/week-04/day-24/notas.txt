@@ -1,0 +1,6 @@
+Python
+FastApi
+PostgreSQL
+Docker
+AWS
+Github
