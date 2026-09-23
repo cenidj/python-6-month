@@ -179,7 +179,7 @@ def exercises():
         if not valor:
             raise ValueError("Can't convert value")
 
-        return valor
+        return int(valor)
 
     print("Convertir valor")
     convertir_entero("dsd")
@@ -216,13 +216,164 @@ def exercises():
     # Level 2 - else and finally
     # 6. make a programa which ask for a number
     try:
-        numero = input("Introduce un numero: ")
+        numero = int(input("Introduce un numero: "))
+
     except ValueError:
         print("Error al convertir el numero")
     else:
         print("Numero valido")
     finally:
         print("Programa terminado")
+
+    # 7. ZeroDivision
+    def dividir(a, b):
+        if b == 0:
+            raise ValueError("Can't divide by cero")
+        return a / b
+
+    try:
+        resultado = dividir(10, 0)
+        print(resultado)
+    except ValueError as error:
+        print(error)
+
+    # 8.
+    def validar_edad(edad):
+        if edad < 0:
+            raise ValueError("Edad invalida")
+        elif edad < 18:
+            raise ValueError("Menor de eadd")
+        else:
+            return "Edad validad"
+
+    try:
+        validar_edad(27)
+    except ValueError as e:
+        print(f"Error: {e}")
+
+    # 9.
+    def retirar_saldo(saldo, cantidad):
+        if cantidad <= 0:
+            raise ValueError("No tiene balance")
+        elif cantidad > saldo:
+            raise ValueError("No tiene balance suficiente")
+
+    try:
+        retirar_saldo(1442, 971)
+    except ValueError as e:
+        print(f"Error: {e}")
+
+    # 10.
+    def calcular_promedio(numeros: list):
+        if len(numeros) == 0:
+            raise ValueError("Lista vacia")
+
+        promedio = sum(numeros) / len(numeros)
+
+        return promedio
+
+    try:
+        calcular_promedio([12, 14, 23, 15, 17])
+    except ValueError as e:
+        print(f"Error: {e}")
+
+    # Level 3 - Backend thinking
+    # 11.
+    def buscar_empleado(empleados, nombre):
+        empleado = next(filter(lambda empleado: empleado == nombre, empleados), None)
+
+        if not empleado:
+            raise ValueError("Empleado no encontrado")
+
+        return empleado
+
+    try:
+        empleado = buscar_empleado(
+            ["Cesario", "Angie", "Francis", "Jorge", "Daniel", "Dony"], "Cesario"
+        )
+        print(f"El empleado del mes es: {empleado}")
+    except ValueError as e:
+        print(f"Error {e}")
+
+    # 12.
+    def agregar_empleado(empleados, empleado):
+        if not empleado["nombre"]:
+            raise ValueError("Nombre es obligatorio")
+        elif empleado["salario"] <= 0:
+            raise ValueError("Salario debe ser mayor que cero")
+        elif not empleado["departamento"]:
+            raise ValueError("El departamento es requerido")
+
+        empleados.append(empleado)
+        print("Empleado agregado satisfactoriamente!")
+        print(empleados)
+
+    agregar_empleado(
+        [
+            {"nombre": "Cesario", "salario": 40000, "departamento": "IT"},
+        ],
+        {"nombre": "Carlos", "salario": 3900, "departamento": "IT"},
+    )
+
+    # 13.
+    def calcular_salario_anual(salario_mensual):
+        if salario_mensual < 0:
+            raise ValueError("Salario debe ser mayor que 0")
+
+        return salario_mensual * 12
+
+    try:
+        salario_anual = calcular_salario_anual(4000)
+        print(salario_anual)
+    except ValueError:
+        print("Error el salario no debe ser menor que 0")
+
+    # 14. Mini proyecto
+    print("\n--- Empleados ---\n")
+    menu = [
+        "1. Agregar empleado",
+        "2. Buscar empleado",
+        "3. Mostrar empleados",
+        "4. Salir",
+    ]
+
+    empleados = []
+
+    while True:
+        for option in menu:
+            print(f"{option}")
+
+        try:
+            select_option = int(input("\nSelecciona una opcion del menu: "))
+
+            if select_option > 4 or select_option <= 0:
+                raise ValueError("Opcion no valida")
+
+            if select_option == "4":  # 4. Salir
+                break
+
+            if select_option == "1":  # 1. Agregar empleado
+                nombre = input("Nombre empleado: ").strip()
+                if len(nombre) < 3:
+                    raise ValueError("El nombre no es correcto")
+
+                empleados.append(nombre)
+                print(empleados)
+
+            if select_option == "2":  # 2. Buscar empleado
+                nombre = input("Nombre empleado").strip()
+                index = empleados.index(nombre)
+                return empleados[index]
+
+            if select_option == "3":  # 3. Mostrar empleados
+                for empleado in empleados:
+                    print(empleado)
+
+        except ValueError as error:
+            print(f"Error: {error}")
+
+        except IndexError:
+            print("Empleado invalido")
 
 
 exercises()
