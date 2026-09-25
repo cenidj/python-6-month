@@ -1,0 +1,54 @@
+2026-09-25 13:14:51,631 - INFO - Aplicacion iniciada
+2026-09-25 13:14:51,631 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:14:51,631 - WARNING - Contrasena incorrecta
+2026-09-25 13:14:51,631 - INFO - Usuario autenticado
+2026-09-25 13:15:22,651 - INFO - Aplicacion iniciada
+2026-09-25 13:15:22,652 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:15:22,652 - WARNING - Contrasena incorrecta
+2026-09-25 13:15:22,652 - INFO - Usuario autenticado
+2026-09-25 13:15:37,585 - INFO - Aplicacion iniciada
+2026-09-25 13:15:37,585 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:15:37,585 - WARNING - Contrasena incorrecta
+2026-09-25 13:15:37,585 - INFO - Usuario autenticado
+2026-09-25 13:16:01,767 - INFO - Aplicacion iniciada
+2026-09-25 13:16:01,767 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:16:01,767 - WARNING - Contrasena incorrecta
+2026-09-25 13:16:01,767 - INFO - Usuario autenticado
+2026-09-25 13:16:45,070 - INFO - Aplicacion iniciada
+2026-09-25 13:16:45,070 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:16:45,071 - WARNING - Contrasena incorrecta
+2026-09-25 13:16:45,071 - INFO - Usuario autenticado
+2026-09-25 13:17:06,792 - INFO - Aplicacion iniciada
+2026-09-25 13:17:06,792 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:17:06,792 - WARNING - Contrasena incorrecta
+2026-09-25 13:17:06,792 - INFO - Usuario autenticado
+2026-09-25 13:19:32,172 - INFO - Aplicacion iniciada
+2026-09-25 13:19:32,172 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:19:32,172 - WARNING - Contrasena incorrecta
+2026-09-25 13:19:32,172 - INFO - Usuario autenticado
+2026-09-25 13:19:32,172 - ERROR - Can't divide by cero
+2026-09-25 13:24:36,032 - INFO - Aplicacion iniciada
+2026-09-25 13:24:36,032 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:24:36,032 - WARNING - Contrasena incorrecta
+2026-09-25 13:24:36,032 - INFO - Usuario autenticado
+2026-09-25 13:24:36,032 - ERROR - Can't divide by cero
+2026-09-25 13:24:36,032 - INFO - Se esta buscando un empleado
+2026-09-25 13:24:36,032 - WARNING - Empleado no existe
+2026-09-25 13:24:53,702 - INFO - Aplicacion iniciada
+2026-09-25 13:24:53,702 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:24:53,702 - WARNING - Contrasena incorrecta
+2026-09-25 13:24:53,702 - INFO - Usuario autenticado
+2026-09-25 13:24:53,702 - ERROR - Can't divide by cero
+2026-09-25 13:24:53,702 - INFO - Se esta buscando un empleado
+2026-09-25 13:24:53,702 - WARNING - Empleado no existe
+2026-09-25 13:24:53,702 - INFO - Se esta buscando un empleado
+2026-09-25 13:24:53,702 - INFO - Empleado encontrado
+2026-09-25 13:25:39,287 - INFO - Aplicacion iniciada
+2026-09-25 13:25:39,287 - INFO - Usuario intentando iniciar sesion
+2026-09-25 13:25:39,287 - WARNING - Contrasena incorrecta
+2026-09-25 13:25:39,287 - INFO - Usuario autenticado
+2026-09-25 13:25:39,287 - ERROR - Can't divide by cero
+2026-09-25 13:25:39,287 - INFO - Se esta buscando el empleado Cesario
+2026-09-25 13:25:39,287 - WARNING - Empleado no existe
+2026-09-25 13:25:39,287 - INFO - Se esta buscando el empleado Ana
+2026-09-25 13:25:39,287 - INFO - Empleado encontrado
