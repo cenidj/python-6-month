@@ -26,12 +26,11 @@ while True:
 
     if select_option == "1":
         mostrar_empleados()
-
-    if select_option == "2":
+    elif select_option == "2":
         buscar_empleado()
-
-    if select_option == "3":
+    elif select_option == "3":
         agregar_empleado()
-
-    if select_option == "11":
+    elif select_option == "11":
         break
+    else:
+        print("Opcion invalida")

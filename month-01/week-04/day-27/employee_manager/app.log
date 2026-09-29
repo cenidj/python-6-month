@@ -27,3 +27,127 @@
 2026-09-28 14:09:00,157 - INFO - App started.
 2026-09-28 14:09:01,450 - INFO - Opening employees.json data 
 2026-09-28 14:09:06,030 - WARNING - Empleado no encontrado: Ce
+2026-09-28 14:10:40,927 - INFO - App started.
+2026-09-28 14:10:44,481 - INFO - Opening employees.json data 
+2026-09-28 14:11:07,509 - INFO - Opening employees.json data 
+2026-09-28 14:11:10,928 - INFO - Opening employees.json data 
+2026-09-28 14:12:46,485 - INFO - App started.
+2026-09-28 14:12:50,401 - INFO - Opening employees.json data 
+2026-09-28 14:13:30,854 - INFO - App started.
+2026-09-28 14:13:32,848 - INFO - Opening employees.json data 
+2026-09-28 14:13:42,977 - INFO - App started.
+2026-09-28 14:13:43,499 - INFO - Opening employees.json data 
+2026-09-28 14:14:05,607 - INFO - App started.
+2026-09-28 14:14:06,206 - INFO - Opening employees.json data 
+2026-09-28 14:14:15,093 - INFO - App started.
+2026-09-28 14:14:15,721 - INFO - Opening employees.json data 
+2026-09-28 14:14:51,445 - INFO - App started.
+2026-09-28 14:14:52,531 - INFO - Opening employees.json data 
+2026-09-28 14:15:38,970 - INFO - App started.
+2026-09-28 14:15:40,962 - INFO - Opening employees.json data 
+2026-09-28 14:16:23,954 - INFO - App started.
+2026-09-28 14:16:25,372 - INFO - Opening employees.json data 
+2026-09-28 14:16:38,929 - INFO - App started.
+2026-09-28 14:16:41,086 - INFO - Opening employees.json data 
+2026-09-28 23:47:52,786 - INFO - App started.
+2026-09-28 23:47:54,404 - INFO - Opening employees.json data 
+2026-09-28 23:48:02,243 - INFO - Empleado encontrado: Cedrick
+2026-09-28 23:48:14,280 - WARNING - Error to introduce one of the required fields
+2026-09-28 23:49:55,472 - INFO - App started.
+2026-09-28 23:49:57,902 - INFO - Opening employees.json data 
+2026-09-28 23:50:07,579 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:07,897 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:08,418 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:08,797 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:09,187 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:10,355 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:11,220 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:12,194 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:14,159 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:15,061 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:16,163 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:16,512 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:19,849 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:21,989 - WARNING - Error to get one of the required fields
+2026-09-28 23:50:24,790 - WARNING - Error to get one of the required fields
+2026-09-28 23:59:38,726 - INFO - App started.
+2026-09-28 23:59:40,204 - INFO - Opening employees.json data 
+2026-09-28 23:59:42,856 - WARNING - Error to get one of the required fields
+2026-09-29 00:26:20,301 - WARNING - Error to get one of the required fields
+2026-09-29 00:26:21,708 - WARNING - Error to get one of the required fields
+2026-09-29 00:26:23,678 - WARNING - Error to get one of the required fields
+2026-09-29 00:26:27,558 - WARNING - Error to get one of the required fields
+2026-09-29 00:26:33,123 - INFO - Opening employees.json data 
+2026-09-29 00:27:59,489 - INFO - App started.
+2026-09-29 00:28:00,971 - INFO - Opening employees.json data 
+2026-09-29 00:28:07,003 - WARNING - Error: invalid literal for int() with base 10: ''
+2026-09-29 00:29:35,703 - INFO - App started.
+2026-09-29 00:29:39,704 - WARNING - Error: invalid literal for int() with base 10: ''
+2026-09-29 00:32:52,084 - INFO - App started.
+2026-09-29 00:33:04,719 - WARNING - Error: could not convert string to float: '500e'
+2026-09-29 00:35:11,217 - INFO - App started.
+2026-09-29 00:35:22,770 - WARNING - Error: could not convert string to float: 'es'
+2026-09-29 00:35:37,796 - WARNING - Error: invalid literal for int() with base 10: '52e'
+2026-09-29 00:35:54,871 - WARNING - Error: invalid literal for int() with base 10: 'd'
+2026-09-29 00:36:02,453 - WARNING - Error: invalid literal for int() with base 10: 'x'
+2026-09-29 00:36:06,869 - INFO - App started.
+2026-09-29 00:36:47,044 - WARNING - Error: invalid literal for int() with base 10: 's3'
+2026-09-29 00:36:52,379 - INFO - App started.
+2026-09-29 00:38:14,091 - WARNING - Error: could not convert string to float: 'dv'
+2026-09-29 00:38:19,389 - INFO - App started.
+2026-09-29 00:39:24,469 - WARNING - Error: invalid literal for int() with base 10: 'k'
+2026-09-29 00:39:28,929 - INFO - App started.
+2026-09-29 00:39:30,865 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 00:39:30,866 - WARNING - Error: El nombre no puede estar vacio
+2026-09-29 00:47:57,576 - INFO - App started.
+2026-09-29 00:47:59,232 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 00:47:59,232 - WARNING - Error: El nombre no puede estar vacio
+2026-09-29 00:48:50,771 - INFO - App started.
+2026-09-29 00:48:53,174 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 00:48:53,175 - WARNING - Error: El nombre no puede estar vacio
+2026-09-29 00:48:58,868 - WARNING - El nombre es demasiado corto.
+2026-09-29 00:49:37,282 - INFO - App started.
+2026-09-29 00:49:39,887 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 00:49:39,887 - WARNING - Error: El nombre no puede estar vacio
+2026-09-29 00:49:58,880 - INFO - Opening employees.json data 
+2026-09-29 00:50:25,802 - INFO - App started.
+2026-09-29 00:50:28,091 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 00:50:28,092 - WARNING - Error: El nombre no puede estar vacio
+2026-09-29 00:50:45,953 - INFO - App started.
+2026-09-29 00:50:48,886 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 00:53:23,010 - INFO - App started.
+2026-09-29 00:53:25,791 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 00:53:27,208 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 00:53:28,495 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:18:05,651 - INFO - App started.
+2026-09-29 07:18:07,231 - INFO - Opening employees.json data 
+2026-09-29 07:18:15,324 - WARNING - Empleado no encontrado: lu
+2026-09-29 07:18:31,417 - INFO - Empleado encontrado: cedrick
+2026-09-29 07:18:43,883 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:18:52,667 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:22:23,263 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:22:25,611 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:22:27,379 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:22:31,807 - WARNING - El nombre es demasiado corto.
+2026-09-29 07:22:38,470 - INFO - App started.
+2026-09-29 07:22:41,371 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:22:42,227 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:22:57,436 - WARNING - La edad no puede ser negativa
+2026-09-29 07:27:38,977 - INFO - App started.
+2026-09-29 07:27:41,025 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:27:41,026 - WARNING - El nombre es demasiado corto.
+2026-09-29 07:28:38,711 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:28:38,713 - WARNING - El nombre es demasiado corto.
+2026-09-29 07:28:43,393 - INFO - App started.
+2026-09-29 07:28:46,591 - WARNING - El nombre es demasiado corto.
+2026-09-29 07:30:53,739 - INFO - App started.
+2026-09-29 07:30:56,899 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 07:31:00,615 - WARNING - El nombre es demasiado corto.
+2026-09-29 07:31:06,140 - WARNING - La edad no puede ser negativa
+2026-09-29 07:31:09,540 - WARNING - La edad no puede ser negativa
+2026-09-29 07:31:18,905 - WARNING - Intento de agregar un empleado con salario negativo
+2026-09-29 07:31:23,657 - WARNING - Intento de agregar un empleado con salario negativo
+2026-09-29 07:31:41,924 - INFO - Empleado agregado correctamente: Kenia
+2026-09-29 07:31:41,924 - INFO - Opening employees.json data 
+2026-09-29 07:38:51,436 - INFO - App started.
+2026-09-29 07:38:53,234 - WARNING - El nombre del empleado no puede estar vacio

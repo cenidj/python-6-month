@@ -1,6 +1,6 @@
 import logging
 
-from utils import employees_filename
+from utils import employees_filename, validate_new_employee
 
 from employees import add_employee, create_employees_file, load_employees
 
@@ -14,16 +14,17 @@ def show_menu(menu):
 
 def show_employee_data(employee):
     print(
-        f"{employee['name']}\nEdad: {employee['age']}\nSalario: {employee['salary']}\nDepartamento: {employee['department']}"
+        f"{employee['name']}\nEdad: {employee['age']}\nSalario: {employee['salary']}\nDepartamento: {employee['department']}\n------------------------------------------\n"
     )
 
 
 def mostrar_empleados():
     try:
+        print("\n")
         logger.info("Opening employees.json data ")
         employees = load_employees(employees_filename)
 
-        if len(employees) == 0:
+        if not employees:
             print("No employees!")
             logger.info("No employees registered.")
         else:
@@ -63,26 +64,11 @@ def buscar_empleado():
 
 
 def agregar_empleado():
-    try:
-        employee_name = input("Nombre: ").strip()
-        employee_age = int(input("Edad: ").strip())
-        employee_salary = float(input("Salario: ").strip())
-        employee_department = input("Departamento: ").strip()
+    new_employee = validate_new_employee()
+    employees = load_employees(employees_filename)
+    employees.append(new_employee)
 
-        employees = load_employees(employees_filename)
+    add_employee(employees_filename, employees)
 
-        new_employee = {
-            "name": employee_name,
-            "age": employee_age,
-            "salary": employee_salary,
-            "department": employee_department,
-        }
-
-        employees.append(new_employee)
-
-        add_employee(employees_filename, employees)
-
-        mostrar_empleados()
-
-    except ValueError:
-        logger.warning("Error to introduce one of the required fields")
+    print("Empleado agregado correctamente")
+    logger.info(f"Empleado agregado correctamente: {new_employee['name']}")
