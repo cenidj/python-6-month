@@ -100,6 +100,6 @@ def registrar_usuario(nombre, email, rol="user", activo=True):
     print(f"Activo: {activo}")
 
 
-registrar_usuario("Cesario", "ing.cesarionivar@gmail.com", activo=False)
-registrar_usuario("Junior", "cndj.dev@gmail.com")
-registrar_usuario(nombre="Cedrick", email="cedrick@gmail.com", rol="admin", activo=True)
+registrar_usuario("Cesario", "x.edu@gmail.com", activo=False)
+registrar_usuario("Junior", "cndddwv@gmail.com")
+registrar_usuario(nombre="Cedrick", email="dsde@gmail.com", rol="admin", activo=True)
