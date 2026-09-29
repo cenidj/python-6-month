@@ -3,6 +3,7 @@ import logging
 from employees import (
     agregar_empleado,
     buscar_empleado,
+    eliminar_empleado,
     menu,
     mostrar_empleados,
     show_menu,
@@ -30,6 +31,8 @@ while True:
         buscar_empleado()
     elif select_option == "3":
         agregar_empleado()
+    elif select_option == "4":
+        eliminar_empleado()
     elif select_option == "11":
         break
     else:

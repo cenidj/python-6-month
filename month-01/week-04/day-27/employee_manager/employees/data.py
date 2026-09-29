@@ -15,9 +15,14 @@ menu = [
 ]
 
 
-def create_employees_file(filename):
+def create_employees_file(filename, data=None):
+    if data is None:
+        data = []
     with open(filename, "w") as file:
-        json.dump([], file, indent=4)
+        json.dump(data, file, indent=4)
+
+
+replace_employees_data = create_employees_file
 
 
 def load_employees(filename):

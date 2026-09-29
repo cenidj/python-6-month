@@ -2,7 +2,12 @@ import logging
 
 from utils import employees_filename, validate_new_employee
 
-from employees import add_employee, create_employees_file, load_employees
+from employees import (
+    add_employee,
+    create_employees_file,
+    load_employees,
+    replace_employees_data,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -72,3 +77,23 @@ def agregar_empleado():
 
     print("Empleado agregado correctamente")
     logger.info(f"Empleado agregado correctamente: {new_employee['name']}")
+
+
+def eliminar_empleado():
+    employee_name = input("Nombre: ").strip()
+    employees: list = load_employees(employees_filename)
+
+    empleado_eliminado = None
+
+    for index, employee in enumerate(employees):
+        if employee["name"].lower() == employee_name.lower():
+            employees.pop(index)
+            empleado_eliminado = employee
+
+    if empleado_eliminado:
+        replace_employees_data(employees_filename, employees)
+        print("Empleado eliminado correctamente.")
+        logger.info(f"Empleado: {employee_name} eliminado correctamente")
+    else:
+        print("Empleado no encontrado")
+        logger.warning(f"Empleado no encontrado: {employee_name}")

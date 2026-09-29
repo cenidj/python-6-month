@@ -151,3 +151,18 @@
 2026-09-29 07:31:41,924 - INFO - Opening employees.json data 
 2026-09-29 07:38:51,436 - INFO - App started.
 2026-09-29 07:38:53,234 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 08:44:51,373 - INFO - App started.
+2026-09-29 08:44:58,066 - INFO - Opening employees.json data 
+2026-09-29 08:48:28,542 - INFO - Opening employees.json data 
+2026-09-29 08:48:46,558 - INFO - Empleado encontrado: 32
+2026-09-29 08:49:04,557 - WARNING - El nombre del empleado no puede estar vacio
+2026-09-29 08:49:20,522 - INFO - Empleado agregado correctamente: Tony
+2026-09-29 08:53:26,570 - INFO - App started.
+2026-09-29 08:53:35,234 - INFO - Opening employees.json data 
+2026-09-29 08:53:58,346 - INFO - Empleado encontrado: 32
+2026-09-29 08:59:51,719 - INFO - App started.
+2026-09-29 08:59:54,990 - INFO - Empleado encontrado: 32
+2026-09-29 09:00:01,575 - INFO - Opening employees.json data 
+2026-09-29 09:03:07,930 - INFO - App started.
+2026-09-29 09:03:09,492 - INFO - Opening employees.json data 
+2026-09-29 09:03:26,398 - INFO - Opening employees.json data 

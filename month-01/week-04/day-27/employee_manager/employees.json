@@ -6,27 +6,21 @@
         "department": "IT"
     },
     {
-        "name": "Cedrick",
-        "age": 2,
-        "salary": 10.0,
-        "department": "Child"
-    },
-    {
         "name": "Josue",
         "age": 24,
         "salary": 45000.0,
         "department": "IT"
     },
     {
-        "name": "32",
-        "age": 2,
-        "salary": 12.0,
-        "department": "d"
-    },
-    {
         "name": "Kenia",
         "age": 52,
         "salary": 65000.0,
+        "department": "HR"
+    },
+    {
+        "name": "Tony",
+        "age": 48,
+        "salary": 70000.0,
         "department": "HR"
     }
 ]
