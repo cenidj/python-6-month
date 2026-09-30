@@ -12,5 +12,6 @@ from employees.services import (
     filtrar_departamento,
     filtrar_salario,
     mostrar_empleados,
+    ordenar_empleados,
     show_menu,
 )

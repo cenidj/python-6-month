@@ -8,6 +8,7 @@ from employees import (
     filtrar_salario,
     menu,
     mostrar_empleados,
+    ordenar_empleados,
     show_menu,
 )
 
@@ -39,6 +40,8 @@ while True:
         filtrar_departamento()
     elif select_option == "6":
         filtrar_salario()
+    elif select_option == "7":
+        ordenar_empleados()
     elif select_option == "11":
         break
     else:

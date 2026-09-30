@@ -147,3 +147,54 @@ def filtrar_salario():
             )
     except ValueError as error:
         print(f"Error: {error}")
+
+
+def ordenar_empleados():
+    sort_options = ["1. Nombre", "2. Edad", "3. Salario", "4. Departamento"]
+
+    sort_term = None
+    reverse_sorting = False
+
+    for option in sort_options:
+        print(option)
+
+    select_option = input("Selecciona una opcion para ordernar: ")
+    if select_option == "1":
+        sort_term = "name"
+    elif select_option == "2":
+        sort_term = "age"
+    elif select_option == "3":
+        sort_term = "salary"
+    elif select_option == "4":
+        sort_term = "department"
+    else:
+        sort_term = "name"
+        print("Sorting by name! (default option)")
+
+    if sort_term:
+        reverse_options = ["1. Ascendente", "2. Descendente"]
+        for option in reverse_options:
+            print(option)
+
+        select_option = input("Selecciona el tipo de ordenado: ")
+        if select_option == "1":
+            reverse_sorting = False
+        elif select_option == "2":
+            reverse_sorting = True
+        else:
+            print("Ordenando de forma ascendente (default option)")
+
+    employees = load_employees(employees_filename)
+
+    sorted_employees = sorted(
+        employees, key=lambda employee: employee[sort_term], reverse=reverse_sorting
+    )
+
+    tipo_ordenado = "Descendente" if reverse_sorting else "Ascendente"
+
+    logger.info(
+        f"Se ordenaron {len(sorted_employees)} empleados por {sort_term} en orden {tipo_ordenado}"
+    )
+
+    for employee in sorted_employees:
+        show_employee_data(employee)
