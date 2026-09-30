@@ -121,3 +121,29 @@ def filtrar_departamento():
     else:
         print(f"Empleados no encontrados para el departamento: {department}")
         logger.warning(f"Empleados no encontrados para el departamento: {department}")
+
+
+def filtrar_salario():
+    try:
+        salario_minimo = float(input("Salario minimo: "))
+
+        employees = load_employees(employees_filename)
+
+        employees_by_minimum_salary = list(
+            filter(lambda employee: employee["salary"] >= salario_minimo, employees)
+        )
+
+        if employees_by_minimum_salary:
+            for employee in employees_by_minimum_salary:
+                show_employee_data(employee)
+
+            logger.info(
+                f"{len(employees_by_minimum_salary)} encontrados con un salario minimo de {salario_minimo}"
+            )
+        else:
+            print(f"No hay empleados con un salario minimo de {salario_minimo}")
+            logger.warning(
+                f"No se encontraron empleados con un salario minimo de {salario_minimo}"
+            )
+    except ValueError as error:
+        print(f"Error: {error}")

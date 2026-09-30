@@ -5,6 +5,7 @@ from employees import (
     buscar_empleado,
     eliminar_empleado,
     filtrar_departamento,
+    filtrar_salario,
     menu,
     mostrar_empleados,
     show_menu,
@@ -36,6 +37,8 @@ while True:
         eliminar_empleado()
     elif select_option == "5":
         filtrar_departamento()
+    elif select_option == "6":
+        filtrar_salario()
     elif select_option == "11":
         break
     else:

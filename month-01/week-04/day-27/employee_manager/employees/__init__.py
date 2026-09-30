@@ -6,10 +6,11 @@ from employees.data import (
     replace_employees_data,
 )
 from employees.services import (
-    buscar_empleado,
-    mostrar_empleados,
-    show_menu,
     agregar_empleado,
+    buscar_empleado,
     eliminar_empleado,
     filtrar_departamento,
+    filtrar_salario,
+    mostrar_empleados,
+    show_menu,
 )

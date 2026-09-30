@@ -172,3 +172,7 @@
 2026-09-30 06:14:54,606 - INFO - App started.
 2026-09-30 06:15:00,011 - WARNING - Empleados no encontrados para el departamento: jd
 2026-09-30 06:15:09,081 - INFO - Los empleados encontrados para el departamento hr son [{'name': 'Kenia', 'age': 52, 'salary': 65000.0, 'department': 'HR'}, {'name': 'Tony', 'age': 48, 'salary': 70000.0, 'department': 'HR'}]
+2026-09-30 06:24:47,923 - INFO - App started.
+2026-09-30 06:30:43,202 - INFO - 3 encontrados con un salario minimo de 50000.0
+2026-09-30 06:30:57,252 - INFO - 1 encontrados con un salario minimo de 68000.0
+2026-09-30 06:31:04,682 - WARNING - No se encontraron empleados con un salario minimo de 90000.0
