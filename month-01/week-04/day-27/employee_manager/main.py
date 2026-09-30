@@ -6,6 +6,7 @@ from employees import (
     eliminar_empleado,
     filtrar_departamento,
     filtrar_salario,
+    guardar_empleados,
     menu,
     mostrar_empleados,
     ordenar_empleados,
@@ -24,7 +25,7 @@ logger = logging.getLogger(__name__)
 logger.info("App started.")
 
 while True:
-    print("\n\n\n=== Employees managment ===\n")
+    print("\n\n\n=== Employees Management ===\n")
 
     show_menu(menu)
 
@@ -48,7 +49,10 @@ while True:
         salario_promedio()
     elif select_option == "9":
         salario_mas_alto()
+    elif select_option == "10":
+        guardar_empleados()
     elif select_option == "11":
         break
     else:
+        logger.info("App finished.")
         print("Opcion invalida")

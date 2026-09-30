@@ -222,3 +222,15 @@ def salario_mas_alto():
     except ValueError:
         print("No existen empleados para encontrar el salario mas alto")
         logger.error("No hay empleados guardados")
+
+
+def guardar_empleados():
+    try:
+        employees = load_employees(employees_filename)
+        replace_employees_data(employees_filename, employees)
+        print("Empleados guardados correctamente")
+        logger.info("Se guardaron los empleados")
+
+    except PermissionError:
+        print("Errores de permisos")
+        logger.error("Error al guardar los empleados")
