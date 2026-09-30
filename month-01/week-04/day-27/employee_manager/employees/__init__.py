@@ -11,4 +11,5 @@ from employees.services import (
     show_menu,
     agregar_empleado,
     eliminar_empleado,
+    filtrar_departamento,
 )

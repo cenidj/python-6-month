@@ -97,3 +97,27 @@ def eliminar_empleado():
     else:
         print("Empleado no encontrado")
         logger.warning(f"Empleado no encontrado: {employee_name}")
+
+
+def filtrar_departamento():
+    department = input("Departamento: ").strip()
+
+    employees = load_employees(employees_filename)
+
+    employees_by_department = list(
+        filter(
+            lambda employee: employee["department"].lower() == department.lower(),
+            employees,
+        )
+    )
+
+    if employees_by_department:
+        for employee in employees_by_department:
+            show_employee_data(employee)
+
+        logger.info(
+            f"Se encontraron {len(employees_by_department)} empleados en el departamento {department}"
+        )
+    else:
+        print(f"Empleados no encontrados para el departamento: {department}")
+        logger.warning(f"Empleados no encontrados para el departamento: {department}")
