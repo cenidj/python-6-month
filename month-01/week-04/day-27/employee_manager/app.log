@@ -192,3 +192,20 @@
 2026-09-30 12:16:00,694 - INFO - App started.
 2026-09-30 12:16:04,607 - INFO - Opening employees.json data 
 2026-09-30 12:16:07,509 - INFO - Se guardaron los empleados
+2026-09-30 13:55:21,776 - INFO - App started.
+2026-09-30 13:55:22,741 - INFO - Opening employees.json data 
+2026-09-30 13:55:24,186 - INFO - App finished.
+2026-09-30 13:55:25,564 - INFO - App finished.
+2026-09-30 13:55:26,616 - INFO - App finished.
+2026-09-30 13:55:27,999 - INFO - App finished.
+2026-09-30 13:55:30,351 - WARNING - Empleado no encontrado: cvds
+2026-09-30 13:55:36,174 - WARNING - Empleado no encontrado: 92314
+2026-09-30 13:55:40,368 - WARNING - Empleado no encontrado: vdsvedv
+2026-09-30 13:55:46,012 - INFO - Empleado encontrado: cesario
+2026-09-30 13:56:10,410 - INFO - Empleado agregado correctamente: Lidia Maria
+2026-09-30 13:56:11,730 - INFO - Opening employees.json data 
+2026-09-30 13:56:20,639 - WARNING - Empleado no encontrado: lidiacdvr
+2026-09-30 13:56:27,790 - INFO - Empleado: lidia maria eliminado correctamente
+2026-09-30 13:56:35,883 - INFO - Se encontraron 2 empleados en el departamento it
+2026-09-30 13:56:42,455 - INFO - 4 encontrados con un salario minimo de 120.0
+2026-09-30 13:57:01,982 - INFO - Se guardaron los empleados
