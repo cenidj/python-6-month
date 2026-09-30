@@ -1,6 +1,6 @@
 import logging
 
-from utils import employees_filename, validate_new_employee, calcular_promedio
+from utils import calcular_promedio, employees_filename, validate_new_employee
 
 from employees import (
     add_employee,
@@ -209,3 +209,16 @@ def salario_promedio():
     promedio_salarial = calcular_promedio(salarios)
 
     print(f"El promedio de salario es {promedio_salarial}")
+
+
+def salario_mas_alto():
+    try:
+        employees = load_employees(employees_filename)
+        employee_highest_salary = max(
+            employees, key=lambda employee: employee["salary"]
+        )
+
+        show_employee_data(employee_highest_salary)
+    except ValueError:
+        print("No existen empleados para encontrar el salario mas alto")
+        logger.error("No hay empleados guardados")

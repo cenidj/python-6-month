@@ -9,6 +9,7 @@ from employees import (
     menu,
     mostrar_empleados,
     ordenar_empleados,
+    salario_mas_alto,
     salario_promedio,
     show_menu,
 )
@@ -45,6 +46,8 @@ while True:
         ordenar_empleados()
     elif select_option == "8":
         salario_promedio()
+    elif select_option == "9":
+        salario_mas_alto()
     elif select_option == "11":
         break
     else:

@@ -13,6 +13,7 @@ from employees.services import (
     filtrar_salario,
     mostrar_empleados,
     ordenar_empleados,
+    salario_mas_alto,
     salario_promedio,
     show_menu,
 )
