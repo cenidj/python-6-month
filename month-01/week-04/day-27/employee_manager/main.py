@@ -9,6 +9,7 @@ from employees import (
     menu,
     mostrar_empleados,
     ordenar_empleados,
+    salario_promedio,
     show_menu,
 )
 
@@ -42,6 +43,8 @@ while True:
         filtrar_salario()
     elif select_option == "7":
         ordenar_empleados()
+    elif select_option == "8":
+        salario_promedio()
     elif select_option == "11":
         break
     else:

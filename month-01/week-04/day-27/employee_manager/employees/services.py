@@ -1,6 +1,6 @@
 import logging
 
-from utils import employees_filename, validate_new_employee
+from utils import employees_filename, validate_new_employee, calcular_promedio
 
 from employees import (
     add_employee,
@@ -198,3 +198,14 @@ def ordenar_empleados():
 
     for employee in sorted_employees:
         show_employee_data(employee)
+
+
+def salario_promedio():
+    employees = load_employees(employees_filename)
+    salarios = []
+    for employee in employees:
+        salarios.append(employee["salary"])
+
+    promedio_salarial = calcular_promedio(salarios)
+
+    print(f"El promedio de salario es {promedio_salarial}")
