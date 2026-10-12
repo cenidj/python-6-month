@@ -161,4 +161,124 @@ def eliminar_usuario(usuario, usuario_id):
 admin = {"nombre": "Ana", "rol": "admin"}
 cliente = {"nombre": "Carlos", "rol": "user"}
 
-eliminar_usuario(cliente, 25)
+eliminar_usuario(admin, 25)
+# eliminar_usuario(cliente, 25)
+
+
+# Ejercicios
+# Ejercicio 1. Tu primer decorator
+def mostrar_mensaje(funcion):
+    @wraps(funcion)
+    def wrapper(*args, **kwargs):
+        print("Iniciando funcion")
+        resultado = funcion(*args, **kwargs)
+        print("Funcion ejecutada")
+        return resultado
+
+    return wrapper
+
+
+@mostrar_mensaje
+def saludar():
+    print("Hola, Python")
+
+
+saludar()
+
+
+# Ejercicio 2. Decorador con argumentos
+def registrar(funcion):
+
+    @wraps(funcion)
+    def wrapper(*args, **kwargs):
+        print(f"Ejecutando {funcion.__name__}")
+        resultado = funcion(*args, **kwargs)
+
+        return resultado
+
+    return wrapper
+
+
+@registrar
+def presentar(nombre, edad):
+    print(f"Me llamo {nombre} y tengo {edad} años")
+
+
+presentar("Cesario", 27)
+
+
+# Ejercicio 3. Conservar el resultado
+@mi_decorador
+def decorador(funcion):
+    @wraps(funcion)
+    def wrapper(*args, **kwargs):
+        print("Calculando...")
+        resultado = funcion(*args, **kwargs)
+        return resultado
+
+    return wrapper
+
+
+@decorador
+def multiplicar(a, b):
+    return a * b
+
+
+resultado = multiplicar(5, 6)
+
+print(resultado)
+
+
+# Ejercicio 4. Medir el tiempo
+def medir_tiempo(funcion):
+    @wraps(funcion)
+    def wrapper(*args, **kwargs):
+        inicio = perf_counter()
+        resultado = funcion(*args, **kwargs)
+        fin = perf_counter()
+        print(f"Tiempo: {fin - inicio:.6f} segundos")
+        return resultado
+
+    return wrapper
+
+
+@medir_tiempo
+def contar():
+    total = 0
+
+    for numero in range(1_000_000):
+        total += numero
+
+    return total
+
+
+contar()
+
+
+# Ejercicio 5. Autorizacion en backend
+def requiere_admin(funcion):
+    @wraps(funcion)
+    def wrapper(usuario, *args, **kwargs):
+        if usuario.get("rol") != "admin":
+            raise PermissionError("Accesso denegado")
+
+        resultado = funcion(usuario, *args, **kwargs)
+        return resultado
+
+    return wrapper
+
+
+@requiere_admin
+def eliminar_producto(usuario, producto_id):
+    print(f"Producto {producto_id} eliminado")
+
+
+admin = {"nombre": "Ana", "rol": "admin"}
+cliente = {"nombre": "Carlos", "rol": "user"}
+
+eliminar_producto(admin, "1")
+
+try:
+    eliminar_producto(cliente, "2")
+except PermissionError:
+    print("El usuario no puede ser eliminado sin privilegios de administrador")
