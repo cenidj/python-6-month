@@ -16,18 +16,16 @@ def empleados():
 def test_empleados_por_IT(empleados):
     resultado = empleados_por_departamento(empleados, "IT")
 
-    for empleado in resultado:
-        assert empleado["nombre"] in ["Ana", "John"]
+    assert [empleado["nombre"] for empleado in resultado] == ["Ana", "John"]
 
 
 def test_empleados_por_HR(empleados):
     resultado = empleados_por_departamento(empleados, "HR")
 
-    for empleado in resultado:
-        assert empleado["nombre"] == "Carlos"
+    assert [empleado["nombre"] for empleado in resultado] == ["Carlos"]
 
 
 def test_empleados_por_departamento_vacio(empleados):
     resultado = empleados_por_departamento(empleados, "vacio")
 
-    assert len(resultado) == 0
+    assert resultado == []
