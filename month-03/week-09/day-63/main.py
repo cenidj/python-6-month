@@ -1,37 +1,42 @@
-from fastapi import FastAPI, Path
+from fastapi import FastAPI, HTTPException, Path
 
 app = FastAPI(
-    title="Sistema de Gestion de Empleados",
-    description="API REST para administrar empleados.",
+    title="Sistema de Gestion de Productos",
+    description="API REST para gestionar los productos de Nivar Enterprise",
     version="1.0.0",
 )
 
 
+productos = [
+    {"id": 1, "name": "Mouse", "price": 25, "stock": 3},
+    {"id": 5, "name": "Keyboard", "price": 50, "stock": 8},
+    {"id": 30, "name": "Monitor", "price": 200, "stock": 2},
+]
+
+
 @app.get(
-    "/empleados",
-    summary="Obtener empleados",
-    description="Devuelve una lista de todos los empleados registrados.",
+    "/productos",
+    summary="Obtener productos",
+    description="Devuelve todos los productos registrados",
 )
-def obtener_empleados():
-    return [
-        {"id": 1, "nombre": "Cesario"},
-        {"id": 2, "nombre": "Cedrick"},
-    ]
-
-
-@app.get("/empleadoss/{empleado_id}")
-def obtener_empleado(
-    empleado_id: int = Path(description="Identificador unico del empleado", gt=0),
-):
-    return {"id": empleado_id}
+def obtener_productos():
+    return productos
 
 
 @app.get(
-    "/empleados/{empleado_id}",
+    "/productos/{producto_id}",
+    summary="Obtener producto",
+    description="Busca un producto mediante su identificador",
     responses={
-        200: {"description": "Empleado encontrado"},
-        404: {"description": "Empleado no encontrado"},
+        200: {"description": "Producto encontrado"},
+        404: {"description": "Producto no encontrado"},
     },
 )
-def obtener_empleado_by_id(empleado_id: int):
-    return {"id": empleado_id}
+def obtener_producto(
+    producto_id: int = Path(description="Identificador del producto a buscar", gt=0),
+):
+    for producto in productos:
+        if producto["id"] == producto_id:
+            return producto
+
+    raise HTTPException(status_code=404, detail="Producto no encontrado")
